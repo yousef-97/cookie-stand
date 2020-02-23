@@ -1,0 +1,20 @@
+h2#sales {
+    margin: 10px;
+    font-size: 40px;
+    font-weight: 1000;
+    margin-left: 30%;
+}
+article{float: left;}
+h2{
+    margin-left: 55px;
+    font-size: 20px;
+    font-weight: 1000;
+}
+ul{
+
+    margin:15px 30px;
+    list-style: disc;
+}
+li{
+    padding-top: 5px;
+}
