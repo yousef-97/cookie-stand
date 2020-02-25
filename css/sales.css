@@ -1,0 +1,24 @@
+h1{font-size: 50px;}
+
+table, th, td {
+    border: 1px solid rgb(9, 191, 236);
+    padding: 4px;
+}
+h2{
+    margin: 20px 40px;
+    font-size: 30px;
+    font-weight: 700;
+}
+li{
+    margin-left: 20px;
+    margin-top: 5px;
+    list-style: disc;
+}
+header nav ul li a{
+    
+    font-size: 20px;
+    text-decoration: none;
+    color: burlywood;
+    text-align: center;
+    
+}
