@@ -247,7 +247,7 @@ var workHours = ['6 am','7 am','8 am','9 am','10 am','11 am','12 pm','1 pm','2 p
 // lima.renderlima();
 
 header();//to call header of table
-var totaly = [];
+// var totaly = [];
 function Locationsales(nameLocation,minCus,maxCus,avgCo){
   this.nameLocation = nameLocation;
   this.minCus = minCus;
@@ -255,7 +255,7 @@ function Locationsales(nameLocation,minCus,maxCus,avgCo){
   this.avgCo = avgCo;
   this.numOfcookies=[]; ///dose not need a parameter or arguments because its empty it will fill after calling the cookiesPerHour
   this.cookiesShouldPrepare = []; //dose not need an arguments because its empty it will fill after calling the cookiesPerHour
-  this.totaly = [];
+  // this.totaly = [];
 }
 
 Locationsales.prototype.cookiesPerHour = function(){
@@ -265,9 +265,9 @@ Locationsales.prototype.cookiesPerHour = function(){
     // console.log(`at ${workHours[i]} : ${this.numOfcookies[i]} cookies`);
     this.cookiesShouldPrepare.push(`at ${workHours[i]} : ${this.numOfcookies[i]} cookies`);//......... cookies per hour
     total +=this.numOfcookies[i];
-    if (i === workHours.length-1){this.cookiesShouldPrepare.push(`the total is ${total}`),this.numOfcookies.push(total);}//........for the TOTAL number of cookies in the day
+    if (i === workHours.length-1){this.cookiesShouldPrepare.push(`the total is ${total}`),this.numOfcookies.push(total);}//........length-1 to push the total befor the loop close &for the TOTAL number of cookies in the day
   }
-  totaly.push(total);
+  // totaly.push(total);
   // console.log(this.totaly);
   // console.log(`Total : ${total} cookies`);
 };
@@ -327,7 +327,7 @@ var lima = new Locationsales('lima',2,16,4.6);
 
 // console.log(seattle.numOfcookies[0]);
 var allLocation = [seattle.salesMoves(),tokyo.salesMoves(),dubai.salesMoves(),paris.salesMoves(),lima.salesMoves()];//more eazy calling
-// allLocation;
+allLocation;
 
 //function header of the TABLE
 function header(){
@@ -362,24 +362,27 @@ function footer(){
   var tdE = document.createElement('td');
   trE.appendChild(tdE);
   tdE.textContent = 'TOTAL';
-  var totalOfTotal = 0;
-  // for(var j = 0;j<6;j++){
+  // var totalOfTotal = 0;
 
   var theTotal = [];
-  for( var c = 0;c<allLocation.length;c++){
-    theFooter = document.getElementById('table');
-    theFooter.appendChild(trE);
-    tdE = document.createElement('td');
-    trE.appendChild(tdE);
-    // console.log(allLocation.totaly);
-    // Locationsales[c];
-    // theTotal[c]=
-    // console.log(theTotal);
-    tdE.textContent = totaly[c];
-    totalOfTotal +=totaly[c];
-  }
+  for( var j = 0;j < workHours.length;j++){
 
-  // }
+    for( var c = 0;c<allLocation.length;c++){
+      theFooter = document.getElementById('table');
+      theFooter.appendChild(trE);
+      tdE = document.createElement('td');
+      trE.appendChild(tdE);
+      allLocation[c];
+      theTotal.puch(allLocation[c].numOfcookies[c]);
+      console.log(theTotal);
+      // Locationsales[c];
+      // theTotal[c]=
+      // console.log(theTotal);
+      // totalOfTotal +=totaly[c];
+    }
+    tdE.textContent = theTotal[j];
+
+  }
 }
 footer();
 
