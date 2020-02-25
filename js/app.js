@@ -247,6 +247,7 @@ var workHours = ['6 am','7 am','8 am','9 am','10 am','11 am','12 pm','1 pm','2 p
 // lima.renderlima();
 
 header();//to call header of table
+var totaly = [];
 function Locationsales(nameLocation,minCus,maxCus,avgCo){
   this.nameLocation = nameLocation;
   this.minCus = minCus;
@@ -266,10 +267,11 @@ Locationsales.prototype.cookiesPerHour = function(){
     total +=this.numOfcookies[i];
     if (i === workHours.length-1){this.cookiesShouldPrepare.push(`the total is ${total}`),this.numOfcookies.push(total);}//........for the TOTAL number of cookies in the day
   }
-  this.totaly.push(total);
+  totaly.push(total);
+  // console.log(this.totaly);
   // console.log(`Total : ${total} cookies`);
 };
-console.log(new Locationsales('shadasda',12,32,2).cookiesPerHour.total);
+// console.log(new Locationsales('shadasda',12,32,2));
 //method the data of sales
 Locationsales.prototype.data= function (){
   var hi = document.getElementById('table');//to add the elements inside the table that i made it in header function
@@ -352,23 +354,32 @@ function header(){
   thE.textContent='TOTAL';
 }
 //my problem
+//footer function
 function footer(){
   var theFooter = document.getElementById('table');
   var trE = document.createElement('tr');
   theFooter.appendChild(trE);
   var tdE = document.createElement('td');
   trE.appendChild(tdE);
-  trE.textContent = 'TOTAL';
-  for(var j = 0;j<workHours.length;j++){
+  tdE.textContent = 'TOTAL';
+  var totalOfTotal = 0;
+  // for(var j = 0;j<6;j++){
+
+  var theTotal = [];
+  for( var c = 0;c<allLocation.length;c++){
+    theFooter = document.getElementById('table');
+    theFooter.appendChild(trE);
     tdE = document.createElement('td');
     trE.appendChild(tdE);
-    var theTotal = 0;
-    for( var c = 0;c<allLocation.length;c++){
-      theTotal+=Locationsales[c].totaly[c];
-      console.log(theTotal);
-    }
-    trE.textContent = theTotal;
+    // console.log(allLocation.totaly);
+    // Locationsales[c];
+    // theTotal[c]=
+    // console.log(theTotal);
+    tdE.textContent = totaly[c];
+    totalOfTotal +=totaly[c];
   }
+
+  // }
 }
 footer();
 
