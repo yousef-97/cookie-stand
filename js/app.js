@@ -53,9 +53,12 @@ Locationsales.prototype.data= function (){
   }
   // console.log(this.numOfcookies);
 
-
-
 };
+
+
+
+
+
 //for calling every things
 new Locationsales('seattle',23,65,6.3);
 
@@ -136,11 +139,13 @@ function footer(){
     // console.log(t);
   }
 }
+
+
 for(var i =0;i<allLocation.lengt;i++){
   allLocation[i];
 }
-footer();
 
+footer();
 
 
 //helper function
@@ -149,3 +154,16 @@ function getRandomCus(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min;
 }
+
+var addLocation = document.getElementById('form');
+addLocation.addEventListener('submit',function(event){
+  event.preventDefault();
+  console.log(event.target);
+  var theNewLocation = event.target.location.value;
+  var theMin = event.target.mincustomer.value;
+  var theMax = event.target.maxcustomer.value;
+  var theAvg = event.target.avgcookies.value;
+  new Locationsales(theNewLocation,theMin,theMax,theAvg);
+  // console.log(allLocation);
+  footer();
+});

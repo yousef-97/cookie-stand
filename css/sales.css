@@ -22,3 +22,20 @@ header nav ul li a{
     text-align: center;
     
 }
+legend {
+    /* text-align: center; */
+    font-size: 30px;
+    padding: 20px;
+}
+
+div {
+    margin: 5px;
+    font-size: 20px;
+}
+form#form {
+    margin: 20px;
+}
+input#bot {
+    margin-top: 20px;
+    margin-left: 125px;
+}
