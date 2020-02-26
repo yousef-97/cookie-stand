@@ -157,6 +157,8 @@ function getRandomCus(min, max) {
 
 var addLocation = document.getElementById('form');
 addLocation.addEventListener('submit',function(event){
+  var gg = document.getElementById('table');
+  gg.deleteRow(allLocation.length+1);
   event.preventDefault();
   console.log(event.target);
   var theNewLocation = event.target.location.value;
