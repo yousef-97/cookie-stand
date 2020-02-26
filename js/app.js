@@ -2,7 +2,7 @@
 
 var workHours = ['6 am','7 am','8 am','9 am','10 am','11 am','12 pm','1 pm','2 pm','3 pm','4 pm','5 pm','6 pm','7 pm'];
 
-
+var allLocation = [];
 header();//to call header of table
 
 //constructor function
@@ -13,7 +13,9 @@ function Locationsales(nameLocation,minCus,maxCus,avgCo){
   this.avgCo = avgCo;
   this.numOfcookies=[]; ///dose not need a parameter or arguments because its empty it will fill after calling the cookiesPerHour
   this.cookiesShouldPrepare = []; //dose not need an arguments because its empty it will fill after calling the cookiesPerHour
-
+  allLocation.push(this);
+  this.cookiesPerHour();
+  this.data();
 }
 //
 Locationsales.prototype.cookiesPerHour = function(){
@@ -28,12 +30,13 @@ Locationsales.prototype.cookiesPerHour = function(){
 
 };
 
+
 //method the data of cookeies
 Locationsales.prototype.data= function (){
   var hi = document.getElementById('table');//to add the elements inside the table that i made it in header function
   var theData = document.createElement('tr');
   hi.appendChild(theData);
-  var e =document.createElement('th');
+  var e =document.createElement('td');
   theData.appendChild(e);
   e.textContent = this.nameLocation;
   for (var z = 0;z<workHours.length;z++){
@@ -45,8 +48,21 @@ Locationsales.prototype.data= function (){
       theData.appendChild(tdE);
       tdE.textContent=this.numOfcookies[workHours.length];}
   }
+  console.log(this.numOfcookies);
 
 };
+//for calling every things
+new Locationsales('seattle',23,65,6.3);
+// seattle.render();
+new Locationsales('tokyo',3,24,1.2);
+// tokyo.render();
+new Locationsales('dubai',11,38,3.7);
+// dubai.render();
+new Locationsales('paris',20,38,2.3);
+// paris.render();
+new Locationsales('lima',2,16,4.6);
+// lima.render();
+// console.log(new Locationsales('seattle',23,65,6.3));
 
 //cookeis for each location NOT THE TABLE
 Locationsales.prototype.salesMoves = function(){
@@ -68,27 +84,17 @@ Locationsales.prototype.salesMoves = function(){
   }
 };
 
-//for calling every things
-var seattle = new Locationsales('seattle',23,65,6.3);
-// seattle.render();
-var tokyo = new Locationsales('tokyo',3,24,1.2);
-// tokyo.render();
-var dubai = new Locationsales('dubai',11,38,3.7);
-// dubai.render();
-var paris = new Locationsales('paris',20,38,2.3);
-// paris.render();
-var lima = new Locationsales('lima',2,16,4.6);
-// lima.render();
+
 
 //rendering method
-Locationsales.prototype.render = function(){
-  this.cookiesPerHour();
-  this.data();
-  this.salesMoves();
-};
+// Locationsales.prototype.render = function(){
+//   this.cookiesPerHour();
+//   this.data();
+//   this.salesMoves();
+// };
 
-var allLocation = [seattle.render(),tokyo.render(),dubai.render(),paris.render(),lima.render()];
-allLocation;//more eazy calling
+// var allLocation = [seattle.render(),tokyo.render(),dubai.render(),paris.render(),lima.render()];
+// allLocation;//more eazy calling
 
 
 //function header of the TABLE
@@ -117,7 +123,7 @@ function footer(){
   var theFooter = document.getElementById('table');
   var trE = document.createElement('tr');
   theFooter.appendChild(trE);
-  var tdE = document.createElement('th');
+  var tdE = document.createElement('td');
   trE.appendChild(tdE);
   tdE.textContent = 'TOTAL';
 
@@ -125,15 +131,18 @@ function footer(){
     var t = 0;
     tdE = document.createElement('td');
     trE.appendChild(tdE);
-    var arr1=[seattle.numOfcookies[j],tokyo.numOfcookies[j],dubai.numOfcookies[j],paris.numOfcookies[j],lima.numOfcookies[j]];
+    // var arr1=[seattle.numOfcookies[j],tokyo.numOfcookies[j],dubai.numOfcookies[j],paris.numOfcookies[j],lima.numOfcookies[j]];
     // console.log(arr1);
-    for ( var c= 0;c<arr1.length;c++){
-      t+= arr1[c];
+    for ( var c= 0;c<allLocation.length;c++){
+      t+= allLocation[c].numOfcookies[j];
 
     }
     tdE.textContent = t;
     // console.log(t);
   }
+}
+for(var i =0;i<allLocation.lengt;i++){
+  allLocation[i];
 }
 footer();
 
