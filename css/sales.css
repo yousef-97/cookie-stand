@@ -1,28 +1,32 @@
-h1{font-size: 50px;}
-
-table, th, td {
-    border: 1px solid rgb(9, 191, 236);
-    padding: 4px;
+h1 {
+    font-size: 50px;
 }
-h2{
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    color: lightskyblue;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #af2828;
+}
+
+h2 {
+    color: rgb(160, 255, 250);
     margin: 20px 40px;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 700;
 }
-li{
-    margin-left: 20px;
-    margin-top: 5px;
-    list-style: disc;
-}
-header nav ul li a{
-    
-    font-size: 20px;
-    text-decoration: none;
-    color: burlywood;
-    text-align: center;
-    
-}
+
 legend {
+    color: rgb(136, 136, 172);
     /* text-align: center; */
     font-size: 30px;
     padding: 20px;
@@ -32,10 +36,16 @@ div {
     margin: 5px;
     font-size: 20px;
 }
+
 form#form {
     margin: 20px;
 }
+
 input#bot {
     margin-top: 20px;
     margin-left: 125px;
+}
+
+label {
+    color: rgb(136, 136, 172);
 }

@@ -1,63 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookies</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header calss= "header">
+    <header id="header">
+        <!-- <img class='logoImg' src="img/assets/chinook.jpg" alt=""> -->
         <h1 id="h1">Wlcome to Salmon Cookies</h1>
         <nav>
-            
             <ul>
-                <li><a href="sales.html">sales</a></li>
-                <li><a href="index.html">home</a></li>
+                <li><a href="sales.html" class="a">sales</a></li>
+                <li><a href="index.html" class="a">About</a></li>
+                <li><a href="location.html" class="a">Locations</a></li>
             </ul>
         </nav>
+        <img class='mainImg' src="img/assets/salmon.png" alt="">
     </header>
-    <main id = "container">
-        <img src="img/assets/chinook.jpg" alt="salmon">
-        <form action="sales.html" id = "form">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" value="Yousef"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value="AlShun"><br><br>
-            <input type="submit" value="ok"><br />
+    <main id="main">
+        <section>
+            <h2 class="h2">What is Salmon Cookies</h2>
+        </section>
+        <section id="about">
+            <img id="family" src="img/assets/family.jpg" alt="">
+            <p class="aboutp">
+                "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+                animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+                assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
+                delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat." "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms
+                of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through
+                shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be
+                welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore
+                always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains." optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+                omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+                a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+            </p>
 
-            <label for="num of cookies" >Num of cookeis</label><br />
-            <input type="radio" class="Cookies" name="gender" value="1-3">
-            <label for="num">1-3</label><br>
-            <input type="radio" class="Cookies" name="gender" value="3-6">
-            <label for="num">4-6</label><br>
-            <input type="radio" class="Cookies" name="gender" value="7-10">
-            <label for="num">7-10</label><br>
+        </section>
+        <section>
+            <p class="aboutp1">
+                "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
+                animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+                assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente
+                delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat." "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms
+                of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through
+                shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be
+                welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore
+                always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains." optio cumque nihil impedit quo minus id quod maxime placeat facere possimus,
+                omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur
+                a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
 
-            <label for="num" class = "Cookies">tell me about how was our cookeis </label>
-            <textarea id = "textarea"></textarea>
+            </p>
+            <img id="fish" src="img/assets/fish.jpg" alt="">
+        </section>
 
-            <label for="work hours" class="wh" >work hours</label>
-            <label for="from to" class="wh">we are available from 6am -8pm</label>
-          </form> 
-          <iframe width="300" height="300" src="https://www.google.com/maps/d/embed?mid=1RI5QqukeY_K9TAf7wZfOOS9Dvlw&ie=UTF8&hl=en&t=h&msa=0&ll=46.80005899999989%2C-111.44531200000006&spn=69.41601%2C166.640625&z=2&output=embed">
 
-          </iframe>
-          
+
+
 
 
 
 
     </main>
+    <footer id="footer">
+        <p class="footerp">contact us on
+            <p class="email">Email : salmon-cookies@coockies.com</p>
+        </p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
 
 
-
-
-
-    <footer>
-        <p> </p>
     </footer>
+
     <script src="js/app.js"></script>
 </body>
+
 </html>
