@@ -141,7 +141,7 @@ function footer() {
 }
 
 
-for (var i = 0; i < allLocation.lengt; i++) {
+for (var i = 0; i < allLocation.length; i++) {
     allLocation[i];
 }
 
